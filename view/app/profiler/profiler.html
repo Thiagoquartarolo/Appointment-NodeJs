@@ -1,0 +1,30 @@
+<div class="col-md-6 content mtop">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="background-image:none">
+            Controle de perfis
+        </div>
+        <div class="panel-body">
+            <div class="dataTable_wrapper">
+                <table class="table table-bordered adjust">
+                    <thead>
+                        <tr>
+                            <th>Usuário</th>
+                            <th>É responsável</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="user in vm.users" data-ng-class="{'bg-warning' : user.changed}">
+                            <td>{{user.username}}</td>
+                            <td>
+                                <input type="checkbox" data-ng-model="user.isResponsible" data-ng-click="vm.markChangedItem(user);" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-right">
+                <input type="button" class="btn btn-primary" value="Salvar" data-ng-click="vm.save();" />
+            </div>
+        </div>
+    </div>
+</div>

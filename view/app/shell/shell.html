@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <div class="navbar-header">
+    <h2>Tela Usuários</h2>
+  </div>
+  <div class="dropdown pull-right user-header">
+    <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <i class="ti-user"></i>{{shell.user.username}}
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li>
+        <a href="javascript:void(0);" data-ng-click="shell.logOut();">
+          <i class="ti-power-off"></i> Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div ng-view></div>
